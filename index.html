@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <script type="text/javascript" src="./js/tailwind.config.js"></script>
+  <script type="text/javascript" src="./js/script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .container-default {
+        @apply container mx-auto mt-32 px-4
+      }
+      .grid-50 {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="icon" type="image/x-icon" href="./img/logo-01.svg">
+  <title>Danilo Lima</title>
+</head>
+
+<body>
+  <nav class="fixed top-0 bg-white/80 backdrop-blur-md w-full z-50">
+    <div class="container mx-auto flex justify-between items-center p-4 h-[70px]">
+      <!-- Navbar Logo -->
+      <a href="#home">
+        <img src="./img/logo-03.svg" alt="Danilo Lima" class="h-[50px] w-auto">
+      </a>
+
+      <!-- Navbar Links -->
+      <ul class="hidden lg:flex space-x-5 lg:space-x-8">
+        <li><a href="#whoWeAre" class="text-base hover:opacity-70">Sobre mim</a></li>
+        <li><a href="#experience" class="text-base hover:opacity-70">Experiências</a></li>
+        <li><a href="#professionalTrajectory" class="text-base hover:opacity-70">Trajetória</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button (hamburger icon) -->
+      <button id="mobileMenuButton" class="lg:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <ul id="mobileMenu"
+        class="absolute top-16 right-0 bg-gra pt-24 p-4 space-y-4 w-full h-screen bg-white backdrop-blur-2xl z-50 text-center transition ease-in-out delay-150 duration-700 -translate-x-full">
+        <li><a href="#whoWeAre" onclick="hiddenMenu()" class="block">Sobre mim</a></li>
+        <li><a href="#experience" onclick="hiddenMenu()" class="block">Experiências</a></li>
+      </ul>
+    </div>
+  </nav>
+  <scroll-container id="home" class="grid">
+    <section class="bg-[url('./img/home/background.webp')] module parallax">
+      <div class="container-default !mt-0 pt-32 h-full flex items-center">
+        <div class="w-1/2 ">
+          <h1 class="text-white text-7xl font-bold">Danilo Lima</h1>
+          <p class="text-white text-lg">Desenvolvedor Front-end | Desenvolvedor Back-end</p>
+        </div>
+      </div>
+    </section>
+  </scroll-container>
+  <scroll-container id="whoWeAre" class="grid bg-gray-300">
+    <section class="container-default pb-32">
+      <div class="grid-50">
+        <img src="./img/whoWeAre/danilo-lima.webp" alt="Imagem" class="max-h-[500px] mx-auto rounded">
+
+        <!-- Texto à Direita -->
+        <div class="">
+          <h2 class="text-2xl font-bold mb-4">Danilo José de Lima</h2>
+          <p class="text-justify text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut laudantium
+            accusamus, est possimus doloribus quae neque? Optio nesciunt expedita in voluptatem quam quae! Iste minus
+            nulla ab, hic ratione eligendi.
+            Ipsum tenetur quasi ullam earum inventore assumenda maxime, culpa aliquam debitis iure eos quos expedita
+            odit
+            officia facere sit, corporis et quam. Ea, perspiciatis quo repellat atque consectetur voluptates
+            exercitationem.
+            Exercitationem eum obcaecati quo reprehenderit a sit quas aliquam similique dignissimos. Recusandae incidunt
+            vitae cupiditate culpa aut magnam eligendi? Iste, repellendus amet ex itaque illum dolores incidunt quae
+            praesentium recusandae.
+            Officiis itaque, cum pariatur commodi nisi magni. Similique debitis reiciendis iure perspiciatis possimus
+            quidem error quos, quas, corrupti minus sed unde? Sapiente, cum! Dignissimos laboriosam consequuntur, cumque
+            quam enim magni!
+            Error autem dolorum sequi deserunt amet, aspernatur voluptates maiores magni minus suscipit voluptatibus
+            molestiae officiis quam necessitatibus doloribus hic sapiente sunt odit et vero rerum ab laudantium
+            distinctio
+            adipisci! Voluptatum!</p>
+        </div>
+      </div>
+      <!-- Imagem à Esquerda -->
+    </section>
+  </scroll-container>
+  <scroll-container id="experience" class="grid">
+    <section class="bg-[url('./img/experience/background.webp')] module parallax">
+      <div class="container-default">
+        <div class="grid-50">
+          <div class="border rounded p-4 space-y-4 backdrop-blur-md">
+            <h1 class="text-white text-5xl font-bold">Desenvolvedor Front-end</h1>
+            <p class="text-white text-justify">HTML, CSS, SASS, WordPress, Typescript, Angularjs, Angular, Vue.js</p>
+          </div>
+          <div class="border rounded p-4 space-y-4 backdrop-blur-md">
+            <h1 class="text-white text-5xl font-bold">Desenvolvedor Back-end</h1>
+            <p class="text-white text-justify">API's REST Full, Spring MVC, Spring Boot,Spring Secury, Hibernate,
+              Node.js, Express, Fastfy, TypeORM.</p>
+          </div>
+          <div class="border rounded p-4 space-y-4 backdrop-blur-md">
+            <h1 class="text-white text-5xl font-bold">Banco de dados</h1>
+            <p class="text-white text-justify">SQL Server, MySql, Mongo DB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </scroll-container>
+  <scroll-container id="professionalTrajectory" class="grid bg-gray-300">
+    <section class="bg-[url('./img/professionalTrajectory/background.webp')] module parallax">
+      <div class="container-default pb-32">
+        <div class="flex flex-col space-y-6 m-auto">
+
+          <div class="flex items-center space-x-4 mx-auto">
+            <div class="bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-md w-96">
+              <h3 class="text-xl font-semibold">MCS BUSINESS SOLUTIONS | 2016 - 2023</h3>
+              <p class="">Início da carreira de desenvolvedor front-end e back-end </p>
+            </div>
+            <div class="w-20 h-20">
+              <img src="./img/professionalTrajectory/mcs.webp" alt="mcs" class="rounded-full">
+            </div>
+            <div class="invisible w-96"></div>
+          </div>
+          <div class="flex items-center space-x-4 mx-auto">
+            <div class="invisible w-96"></div>
+            <div class="w-20 h-20">
+              <img src="./img/professionalTrajectory/hyste-yale.webp" alt="Hyster Yale" class="rounded-full">
+            </div>
+            <div class="bg-white/70 backdrop-blur-sm bg-white p-4 rounded-lg shadow-md w-96">
+              <h3 class="text-xl font-semibold">Hyster-Yale | 2013 - 2015</h3>
+              <p>Analista de Suporte Jr, realizando manutenção e configurações de computadores, servidore e rede</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 mx-auto">
+            <div class="bg-white/70 backdrop-blur-sm bg-white p-4 rounded-lg shadow-md w-96">
+              <h3 class="text-xl font-semibold">Novtis do Brasil | 2011 - 2012</h3>
+              <p>Suporte de helpdesk, realizando configurações de programas de cartão de crédito</p>
+            </div>
+            <div class="w-20 h-20">
+              <img src="./img/professionalTrajectory/novtis.webp" alt="Novtis do Brasil" class="rounded-full">
+            </div>
+            <div class="invisible w-96"></div>
+          </div>
+          <div class="flex items-center space-x-4 mx-auto">
+            <div class="invisible w-96"></div>
+            <div class="w-20 h-20">
+              <img src="./img/professionalTrajectory/voxline.webp" alt="VOXLINE" class="rounded-full">
+            </div>
+            <div class="bg-white/70 backdrop-blur-sm bg-white p-4 rounded-lg shadow-md w-96">
+              <h3 class="text-xl font-semibold">VOXLINE Contact Center | 2010 - 2011</h3>
+              <p>Operador de teleatendimento</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 mx-auto">
+            <div class="bg-white/70 backdrop-blur-sm bg-white p-4 rounded-lg shadow-md w-96">
+              <h3 class="text-xl font-semibold">Tribunal de Justiça de São Paulo | 2006 - 2008</h3>
+              <p>Estagiário, Atendimento balcão de Advogados, Auxiliar na localização de processos, Auxiliar nos
+                serviços de informática</p>
+            </div>
+            <div class="w-20 h-20">
+              <img src="./img/professionalTrajectory/tribunal-justica.webp" alt="Tribunal de Justiça"
+                class="rounded-full">
+            </div>
+            <div class="invisible w-96"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </scroll-container>
+  <footer class="bg-gray-300 w-full py-2">
+    <section class="container mx-auto text-center">
+      <h3 class="text-sm">© Copyright 2023 - Danilo Lima</h3>
+    </section>
+  </footer>
+</body>
+
+</html>
